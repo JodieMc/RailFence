@@ -15,4 +15,3 @@ Features:
 * Exception Handling if a null or invalid key is entered
 * Exception Handling added to Rail Fence Cypher
 * I/O features including inputStream use, output stream
-* GitHub used as a resource
