@@ -3,7 +3,7 @@ package ie.gmit.dip;
 public class TestRunner {
 	private RailFenceCypher rfc = new RailFenceCypher();
 
-	public void test() {
+	public void test() { //Test based on time
 		long start = System.currentTimeMillis();
 		for (int i = 0; i < 10; i++) {
 			rfc.encrypt(file("file.txt" + i));
