@@ -17,7 +17,7 @@ public class Menu {// Handles command line driven menu
 	public Menu() {// Constructor
 		scanner = new Scanner(System.in);// Input stream: allows you to read things in from the console
 
-		// do/for loop: as don't know the number or iterations
+		// do/for loop: to keep everything going
 		do {
 			this.initMenu();
 			this.processInput();
@@ -52,7 +52,7 @@ public class Menu {// Handles command line driven menu
 		setFh(new FileHandler(new RailFenceCypher(0, 0, 0)));
 	}
 
-	private void processInput() {
+	private void processInput() { //Processes user input
 		String input = scanner.next();// Blocking method
 		int choice = Integer.parseInt(input);
 		if (choice == 1) {
@@ -73,7 +73,7 @@ public class Menu {// Handles command line driven menu
 		}
 	}
 
-	private void initMenu() {
+	private void initMenu() { //Menu displayed to user
 		System.out.println("-------------------------");
 		System.out.println("**Rail Fence Cipher 1.0**");
 		System.out.println("-------------------------");
