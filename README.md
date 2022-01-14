@@ -1,4 +1,4 @@
-# railFence
+# RailFence
 Description:
 
 A command line menu-driven Java application capable of encrypting or decrypting a short message or file using a Rail Fence Cypher. 
