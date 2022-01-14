@@ -54,7 +54,7 @@ public class RailFenceCypher { // Handles matrix
 		return cypher_text;
 	}
 
-	static public String decrypt(String s, int key) {
+	static public String decrypt(String s, int key) { //Decrypt
 
 		char[] plainText = s.toCharArray();
 		char[][] cypher = new char[key][plainText.length];
@@ -164,44 +164,42 @@ public class RailFenceCypher { // Handles matrix
 	 */
 	// Want to zigzag over the file or URL text
 
-	/*
-	 * private char[] getPaddedKey(String s) { char[] padded = new char[s.length()];
-	 * 
-	 * int index = 0; for(int i = 0; int < s.length(); i++) { padded[i] = key[i];
-	 * index++;
-	 * 
-	 * if (index == key.length) index = 0; }
-	 * 
-	 * return padded; }
-	 */
+	
+	 private char[] getPaddedKey(String s) { char[] padded = new char[s.length()];
+	
+	  int index = 0; for(int i = 0; int < s.length(); i++) { padded[i] = key[i];
+	  index++;
+	  
+	  if (index == key.length) index = 0; }
+	  
+	  return padded; }
+	 
 
-	/*
-	 * StringBuilder sb = new StringBuilder(); //efficiency.
-	 * 
-	 * for (int i = 0; i < [].length; i++) { ; sb.append(c); } return sb.toString();
-	 */
+	
+	 StringBuilder sb = new StringBuilder(); //efficiency.
+	
+	  for (int i = 0; i < [].length; i++) { ; sb.append(c); } return sb.toString();
+	
 
-	// loop of some type. Whole point is string efficiency within a loop
+	// String efficiency within a loop
 
-	/*
-	 * public static final int MIN_KEY_LENGTH = 3; //Allows outside to see min and
-	 * max, therefore public public static final int MAX_KEY_LENGTH = 10; //Private
-	 * static final int MAX GUESSES = 12; constant - in all caps to indicate
-	 * constant private char[] key = null; String plainText;
-	 * 
-	 * private void ValidateKey(String key) throws Exception{ if (key == null ||
-	 * key.length() < MIN_KEY_LENGTH || key.length() > MAX_KEY_LENGTH) { throw new
-	 * Exception("[Error!] Invalid key entered. Key must be in the range [" +
-	 * MIN_KEY_LENGTH + "..." + MAX_KEY_LENGTH + "]."); } }
-	 * 
-	 * 
-	 * public RailFenceCypher(String key) throws Exception { setKey(key); }
-	 * //converts string to a new character array, public char[] toCharArray public
-	 * void setKey(String key) throws Exception { ValidateKey(key); this.key =
-	 * key.trim().toUpperCase().toCharArray(); }
-	 * 
-	 * 
-	 */
+	
+	 public static final int MIN_KEY_LENGTH = 3; //Allows outside to see min and max, therefore public 
+	 public static final int MAX_KEY_LENGTH = 10;
+	  static final int MAX GUESSES = 12; // constant - in all caps to indicate
+	  constant private char[] key = null; String plainText;
+	 
+	 private void ValidateKey(String key) throws Exception{ if (key == null ||
+	 key.length() < MIN_KEY_LENGTH || key.length() > MAX_KEY_LENGTH) { throw new
+         Exception("[Error!] Invalid key entered. Key must be in the range [" +
+	 MIN_KEY_LENGTH + "..." + MAX_KEY_LENGTH + "]."); } }
+	 
+	 
+	 public RailFenceCypher(String key) throws Exception { setKey(key); } //converts string to a new character array
+          public char[] toCharArray 
+	  public void setKey(String key) throws Exception { 
+	  	ValidateKey(key); this.key = key.trim().toUpperCase().toCharArray(); }
+	
 
 	public RailFenceCypher() {
 
