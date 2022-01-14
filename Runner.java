@@ -10,7 +10,7 @@ public class Runner {
 		Menu m = new Menu(); // Creating an instance of the menu
 		m.start();
 
-		try {
+		try { //Try-catch to catch an exception if it occurs and deal with it
 			RailFenceCypher cypher = new RailFenceCypher();
 			String cypherText = cypher.encrypt(plainText);
 			System.out.println(cypherText);
