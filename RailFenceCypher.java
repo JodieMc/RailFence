@@ -165,20 +165,25 @@ public class RailFenceCypher { // Handles matrix
 	// Want to zigzag over the file or URL text
 
 	
-	 private char[] getPaddedKey(String s) { char[] padded = new char[s.length()];
-	
-	  int index = 0; for(int i = 0; int < s.length(); i++) { padded[i] = key[i];
-	  index++;
+	 private char[] getPaddedKey(String s) { 
+		 char[] padded = new char[s.length()];
+			
+		 	int index = 0; 
+		 
+		 for(int i = 0; int < s.length(); i++) { 
+			 padded[i] = key[i];
+	  		 index++;
 	  
-	  if (index == key.length) index = 0; }
-	  
-	  return padded; }
+	  if (index == key.length) index = 0; {
+	   return padded; }
 	 
 
-	
 	 StringBuilder sb = new StringBuilder(); //efficiency.
 	
-	  for (int i = 0; i < [].length; i++) { ; sb.append(c); } return sb.toString();
+	  for (int i = 0; i < [].length; i++) { 
+			sb.append(c);  
+			return sb.toString();
+	  }
 	
 
 	// String efficiency within a loop
@@ -189,12 +194,11 @@ public class RailFenceCypher { // Handles matrix
 	  static final int MAX GUESSES = 12; // constant - in all caps to indicate
 	  constant private char[] key = null; String plainText;
 	 
-	 private void ValidateKey(String key) throws Exception{ if (key == null ||
-	 key.length() < MIN_KEY_LENGTH || key.length() > MAX_KEY_LENGTH) { throw new
-         Exception("[Error!] Invalid key entered. Key must be in the range [" +
-	 MIN_KEY_LENGTH + "..." + MAX_KEY_LENGTH + "]."); } }
+	 private void ValidateKey(String key) throws Exception{ 
+		 if (key == null || key.length() < MIN_KEY_LENGTH || key.length() > MAX_KEY_LENGTH) { 
+			 throw new Exception("[Error!] Invalid key entered. Key must be in the range ["MIN_KEY_LENGTH + "..." + MAX_KEY_LENGTH + "]."); } }
 	 
-	 
+			 
 	 public RailFenceCypher(String key) throws Exception { setKey(key); } //converts string to a new character array
           public char[] toCharArray 
 	  public void setKey(String key) throws Exception { 
