@@ -17,7 +17,7 @@ public class FileHandler {// Parses files, handles input/output
 
 	public void FileParser() throws IOException {
 		/*
-		 * Exceptions thrown by methods, two types checked and unchecked Checked in this
+		 * Exceptions thrown by methods, two types checked and unchecked - Checked in this
 		 * case - the compiler forces the developer to address
 		 */
 		parse(new FileInputStream(new File("file.txt")), true);
